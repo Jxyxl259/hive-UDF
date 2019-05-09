@@ -14,8 +14,10 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <hadoop.version>2.5.0</hadoop.version>
+    <hive.version>0.13.1</hive.version>
   </properties>
 
   <dependencies>
@@ -25,6 +27,26 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- hadoop client -->
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <version>${hadoop.version}</version>
+    </dependency>
+
+    <!-- Hive Client -->
+    <dependency>
+      <groupId>org.apache.hive</groupId>
+      <artifactId>hive-exec</artifactId>
+      <version>${hive.version}</version>
+    </dependency>
+      <dependency>
+          <groupId>org.apache.hive</groupId>
+          <artifactId>hive-jdbc</artifactId>
+          <version>${hive.version}</version>
+      </dependency>
+
   </dependencies>
 
   <build>
